@@ -1,0 +1,45 @@
+.flex-wrapper{
+    width: 70vw;
+    height: 50vh;
+    border: 3px solid purple;
+    padding: 1rem;
+    margin: 1rem auto;
+    display: flex;
+}
+
+.flex-end{
+    justify-content: flex-end;
+}
+
+.center{
+    justify-content: center;
+}
+
+.space-between{
+    justify-content: space-between;
+}
+
+
+.space-around{
+    justify-content: space-around;
+}
+
+.space-evenly{
+    justify-content: space-evenly;
+}
+
+.flex-item{
+    padding: 1rem;
+}
+
+.item-1{
+    background-color: peru;
+}
+
+.item-2{
+    background-color: slategray;
+}
+
+.item-3{
+    background-color: mediumslateblue;
+}

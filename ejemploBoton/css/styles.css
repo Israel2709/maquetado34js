@@ -1,0 +1,27 @@
+/*Despues creamos la clase*/
+
+
+.my-awesome-button{
+    /*y comenzamos a agregar los atributos que enlistamos
+        ancho
+        alto
+        color de fondo
+        color de fuente
+        tipo de fuente
+        redondeado del borde
+        padding
+    */
+    width: auto;
+    height: 40px;
+    padding: 1rem 1.5rem;
+    border: none;
+    border-radius: .5rem;
+    background-color: rgb(60, 105, 219);
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: arial;
+}
+
+/*y listo, tenemos nuestro botón!*/
