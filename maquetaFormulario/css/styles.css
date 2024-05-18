@@ -1,0 +1,121 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: arial;
+    box-sizing: border-box;
+    color: #333;
+}
+
+body{
+    background: #bfe0bf;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.contact-form{
+    background-color: white;
+    border-radius: .5rem;
+    padding: 2rem;
+}
+
+/*Selector descendiente*/
+/*Selecciona todos los descendientes que cumplan con un selector y que estén dentro de un elemento padre que también cumpla con el selector*/
+/* parentSelector childSelector*/
+
+.contact-form > h2 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+.form-row{
+    display: flex;
+    gap: 1rem;
+    margin-bottom:1rem
+}
+
+.form-group{
+    display: flex;
+    flex-direction: column;
+    gap: .5rem;
+    width: 100%;
+}
+
+.form-group.row{
+    flex-direction: row;
+}
+
+.form-group label{
+    font-size: .75rem;
+}
+
+.form-group input[type="text"], .form-group textarea{
+    height: 40px;
+    width: 100%;
+    border-radius: .5rem;
+    padding: 0 1rem;
+    border: 1px solid #acacac;
+}
+
+.form-group textarea{
+    height: unset;
+    resize: none;
+}
+
+.radio-group{
+    width: 100%;
+    border: 1px solid #acacac;
+    padding: .5rem 1rem;
+    border-radius: .5rem;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    gap: .5rem;
+}
+
+
+
+.form-group label span{
+    color: #0022ff;
+    font-weight: bold;
+}
+
+/* selectores por posicionamiento*/
+#some-list li:nth-of-type(3){
+    background-color: peru;
+}
+
+#some-list li:first-child{
+    background-color: tomato;
+}
+
+#some-list li:last-child{
+    background-color: purple;
+}
+
+#some-list li:nth-child(odd){
+    color: blue;
+}
+
+#some-list li:nth-child(even){
+    color: green;
+}
+
+.submit-button{
+    width: 100%;
+    padding: .5rem;
+    border: none;
+    background-color: #0c7d69;
+    color: white;
+    border-radius: .5rem;
+    height: 40px;
+    font-size: .75rem;
+    letter-spacing: 1px;
+}
+
+.mb-0{
+    margin-bottom: 0;
+}
+
+
