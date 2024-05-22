@@ -1,0 +1,37 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.semaforo{ /*bloque*/
+    align-items: center;
+    width: 132px;
+    height:364px;
+    background-color:#333;
+    border-radius: 1rem;
+    display: flex;
+    justify-content: space-between;
+    padding: 1rem;
+    margin: 1rem;
+    flex-direction: column;
+}
+
+.semaforo__luz{
+    width: 100px;
+    height: 100px;
+    border-radius: 100%;
+    background-color: white;
+}
+
+.semaforo__luz--roja{
+    background-color: red;
+}
+
+.semaforo__luz--amarilla{
+    background-color: goldenrod;
+}
+
+.semaforo__luz--verde{
+    background-color: green;
+}
