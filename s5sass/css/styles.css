@@ -1,26 +1,276 @@
+.justify-content-start {
+  justify-content: flex-start;
+}
+
+.justify-content-center {
+  justify-content: center;
+}
+
+.justify-content-end {
+  justify-content: flex-end;
+}
+
+.justify-content-around {
+  justify-content: space-around;
+}
+
+.justify-content-between {
+  justify-content: space-between;
+}
+
+.justify-content-evenly {
+  justify-content: space-evenly;
+}
+
+.align-items-start {
+  align-items: flex-start;
+}
+
+.align-items-center {
+  align-items: center;
+}
+
+.align-items-end {
+  align-items: flex-end;
+}
+
+.align-items-stretch {
+  align-items: stretch;
+}
+
+.text-size--xs {
+  font-size: 0.75rem;
+}
+
+.text-size--md {
+  font-size: 1rem;
+}
+
+.text-size--lg {
+  font-size: 3rem;
+}
+
+.button--primary {
+  background-color: blue;
+  border-color: blue;
+}
+
+.text--primary {
+  color: blue;
+}
+
+.border--primary {
+  border-color: blue;
+}
+
+.bg--primary {
+  background-color: blue;
+}
+
+.button--secondary {
+  background-color: lightgray;
+  border-color: lightgray;
+}
+
+.text--secondary {
+  color: lightgray;
+}
+
+.border--secondary {
+  border-color: lightgray;
+}
+
+.bg--secondary {
+  background-color: lightgray;
+}
+
+.button--success {
+  background-color: green;
+  border-color: green;
+}
+
+.text--success {
+  color: green;
+}
+
+.border--success {
+  border-color: green;
+}
+
+.bg--success {
+  background-color: green;
+}
+
+.button--danger {
+  background-color: red;
+  border-color: red;
+}
+
+.text--danger {
+  color: red;
+}
+
+.border--danger {
+  border-color: red;
+}
+
+.bg--danger {
+  background-color: red;
+}
+
+.button--warning {
+  background-color: orange;
+  border-color: orange;
+}
+
+.text--warning {
+  color: orange;
+}
+
+.border--warning {
+  border-color: orange;
+}
+
+.bg--warning {
+  background-color: orange;
+}
+
+.button--info {
+  background-color: skyblue;
+  border-color: skyblue;
+}
+
+.text--info {
+  color: skyblue;
+}
+
+.border--info {
+  border-color: skyblue;
+}
+
+.bg--info {
+  background-color: skyblue;
+}
+
+.button--dark {
+  background-color: #333;
+  border-color: #333;
+}
+
+.text--dark {
+  color: #333;
+}
+
+.border--dark {
+  border-color: #333;
+}
+
+.bg--dark {
+  background-color: #333;
+}
+
+.button--light {
+  background-color: #ddd;
+  border-color: #ddd;
+}
+
+.text--light {
+  color: #ddd;
+}
+
+.border--light {
+  border-color: #ddd;
+}
+
+.bg--light {
+  background-color: #ddd;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: arial;
+}
+
 .card {
   border: 1px solid #acacac;
   border-radius: 0.5rem;
+  background-color: white;
+  padding: 1rem;
+  box-shadow: 3px 3px 5px #ddd;
 }
-.card--sedan {
-  background-color: yellow;
+.card__title {
+  font-style: 2rem;
+  margin-bottom: 1rem;
 }
-.card--suvs {
-  background-color: blue;
+.card__title--uppercase {
+  text-transform: uppercase;
 }
-.card--luxury {
-  background-color: green;
+.card__title--capitalize {
+  text-transform: capitalize;
 }
-.card__icon {
-  width: 50px;
-  height: 50px;
+.card__list {
+  display: flex;
+  list-style: none;
+  flex-direction: column;
+  margin-bottom: 1rem;
 }
-.card__icon--sedan {
-  background-image: url("sedan.jpg");
+.card__list-item {
+  padding: 0.5rem 1rem;
 }
-.card__icon--suvs {
-  background-image: url("suvs.jpg");
+.card__list-item:not(:last-child) {
+  border-bottom: 1px solid #acacac;
 }
-.card__icon--luxury {
-  background-image: url("luxury.jpg");
+.card__button-wrapper {
+  display: flex;
+  gap: 1rem;
+}
+.card__button-wrapper--column {
+  flex-direction: column;
+}
+
+.button {
+  height: 40px;
+  padding: 0.5rem 1rem;
+  border: none;
+  border-radius: 0.5rem;
+}
+.button:hover {
+  border: 1px solid #acacac;
+  cursor: pointer;
+  box-shadow: 3px 3px 5px #ddd;
+}
+
+.post-form {
+  border-radius: 0.5rem;
+  box-shadow: 3px 3px 5px #ddd;
+  border: 1px solid #acacac;
+  padding: 1rem;
+  background-color: slateblue;
+  margin: 1rem;
+}
+
+.alert-box {
+  border-radius: 0.5rem;
+  box-shadow: 3px 3px 5px #ddd;
+  border: 1px solid #acacac;
+  padding: 1rem;
+  background-color: slateblue;
+  margin: 1rem;
+  color: white;
+}
+
+.users-list {
+  border-radius: 0.5rem;
+  box-shadow: 3px 3px 5px #ddd;
+  border: 1px solid #acacac;
+  padding: 1rem;
+  background-color: slateblue;
+  margin: 1rem;
+  background-color: peru;
+}
+
+.d-flex {
+  display: flex;
 }/*# sourceMappingURL=styles.css.map */

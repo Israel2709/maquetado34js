@@ -1,26 +1,158 @@
-.card{
-    border:1px solid #acacac;
+$shadowColor: #ddd;
+$borderColor: #acacac;
+
+$flexJustifies:(
+    "start":flex-start,
+    "center":center,
+    "end":flex-end,
+    "around":space-around,
+    "between":space-between,
+    "evenly":space-evenly
+);
+
+$flexAligns:(
+    "start":flex-start,
+    "center":center,
+    "end":flex-end,
+    "stretch":stretch,
+);
+
+$colors: (
+    "primary": blue, 
+    "secondary": lightgray, 
+    "success": green,
+    "danger": red,
+    "warning": orange,
+    "info":skyblue,
+    "dark":#333,
+    "light":#ddd
+    );
+
+$fontSizes:(
+    "xs":.75rem,
+    "md":1rem,
+    "lg":3rem,
+);
+
+@each $name, $justify in $flexJustifies{
+    .justify-content-#{$name}{
+        justify-content: $justify;
+    }
+}
+
+@each $name, $align in $flexAligns{
+    .align-items-#{$name}{
+        align-items: $align;
+    }
+}
+
+@mixin buttonVariant($bgAndBorderColor){
+    background-color: $bgAndBorderColor;
+    border-color: $bgAndBorderColor;
+}
+
+@mixin defaultBox {
     border-radius: .5rem;
-    &--sedan{
-        background-color: yellow;
+    box-shadow: 3px 3px 5px $shadowColor;
+    border: 1px solid $borderColor;
+    padding: 1rem;
+    background-color:slateblue;
+    margin: 1rem;
+}
+
+@each $name, $size in $fontSizes{
+    .text-size--#{$name}{
+        font-size: $size;
     }
-    &--suvs{
-        background-color: blue;
+}
+
+@each $name, $color in $colors {
+    .button--#{$name}{
+        @include buttonVariant($color)
     }
-    &--luxury{
-        background-color: green;
+    .text--#{$name}{
+        color:$color
     }
-    &__icon{
-        width: 50px;
-        height: 50px;
-        &--sedan{
-            background-image: url("sedan.jpg");
+    .border--#{$name}{
+        border-color:$color
+    }
+    .bg--#{$name}{
+        background-color:$color
+    }
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: arial;
+}
+
+.card{
+    border: 1px solid $borderColor;
+    border-radius: .5rem;
+    background-color: white;
+    padding: 1rem;
+    box-shadow: 3px 3px 5px $shadowColor;
+    &__title{
+        font-style: 2rem;
+        margin-bottom: 1rem;
+        &--uppercase{
+            text-transform: uppercase;
         }
-        &--suvs{
-            background-image: url("suvs.jpg");
+        &--capitalize{
+            text-transform: capitalize;
         }
-        &--luxury{
-            background-image: url("luxury.jpg");
+    }
+    &__list{
+        display: flex;
+        list-style: none;
+        flex-direction: column;
+        margin-bottom: 1rem;
+        &-item{
+            padding: .5rem 1rem;
+            &:not(:last-child){
+                border-bottom: 1px solid $borderColor;
+            }
+            
+        }
+    }
+    &__button-wrapper{
+        display: flex;
+        gap: 1rem;
+        &--column{
+            flex-direction: column;
         }
     }
 }
+
+.button{
+    height: 40px;
+    padding: .5rem 1rem;
+    border: none;
+    border-radius: .5rem;
+    &:hover{
+        border: 1px solid $borderColor;
+        cursor: pointer;
+        box-shadow:3px 3px 5px $shadowColor
+    }
+}
+
+.post-form{
+    @include defaultBox()
+}
+
+.alert-box{
+    @include defaultBox();
+    color:white;
+}
+
+.users-list{
+    @include defaultBox();
+    background-color:peru;
+}
+
+.d-flex{
+    display: flex;
+}
+
