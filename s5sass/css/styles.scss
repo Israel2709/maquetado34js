@@ -1,6 +1,17 @@
 $shadowColor: #ddd;
 $borderColor: #acacac;
 
+@mixin buttonVariant($bgAndBorderColor){
+    background-color: $bgAndBorderColor;
+    border-color: $bgAndBorderColor;
+}
+
+$carImages:(
+    "corvette":"../img/corvette.png",
+    "chevy":"../img/chevy.png",
+    "mustang":"../img/mustang.png",
+);
+
 $flexJustifies:(
     "start":flex-start,
     "center":center,
@@ -17,22 +28,82 @@ $flexAligns:(
     "stretch":stretch,
 );
 
+// Colores base neón
 $colors: (
-    "primary": blue, 
-    "secondary": lightgray, 
-    "success": green,
-    "danger": red,
-    "warning": orange,
-    "info":skyblue,
-    "dark":#333,
-    "light":#ddd
-    );
+    "primary": #00d1b2,  // Turquesa neón
+    "secondary": #fb0094,  // Rosa neón
+    "success": #8cc63f,  // Verde lima neón
+    "danger": #ff6263,  // Rojo neón
+    "warning": #f3af37,  // Amarillo neón
+    "info": #00aef0,  // Azul cielo neón
+    "dark": #a800ff,  // Púrpura neón
+    "light": #b2fffc  // Azul claro neón
+);
+
+// Colores de hover neón
+$hoverColors: (
+    "primary": #00b8a0,  // Turquesa oscuro neón
+    "secondary": #e7008a,  // Rosa oscuro neón
+    "success": #79a70a,  // Verde lima oscuro neón
+    "danger": #e55a5b,  // Rojo oscuro neón
+    "warning": #cca300,  // Amarillo oscuro neón
+    "info": #008ac9,  // Azul cielo oscuro neón
+    "dark": #9100ff,  // Púrpura oscuro neón
+    "light": #a3ffd6  // Azul claro oscuro neón
+);
+
+// Colores de texto neón
+$textColors: (
+    "primary": white,
+    "secondary": white,
+    "success": white,
+    "danger": white,
+    "warning": white,
+    "info": white,
+    "dark": white,
+    "light": #333  // Gris oscuro para contraste con el fondo claro neón
+);
+
+@each $name, $color in $colors {
+    $hoverColor: map-get($hoverColors,$name );
+    $textColor: map-get($textColors,$name );
+    .button--#{$name}{
+        @include buttonVariant($color);
+        color: $textColor;
+        &:hover{
+            @include buttonVariant($hoverColor);
+            color: $textColor;
+        }
+    }
+
+
+
+
+
+
+    /*.text--#{$name}{
+        color:$color
+    }
+    .border--#{$name}{
+        border: 1px solid $color;
+       
+    }
+    .bg--#{$name}{
+        background-color:$color
+    }*/
+}
 
 $fontSizes:(
     "xs":.75rem,
     "md":1rem,
     "lg":3rem,
 );
+
+@each $name, $carImage in $carImages{
+    .bg--#{$name}{
+        background-image: url($carImage);
+    }
+} 
 
 @each $name, $justify in $flexJustifies{
     .justify-content-#{$name}{
@@ -46,10 +117,7 @@ $fontSizes:(
     }
 }
 
-@mixin buttonVariant($bgAndBorderColor){
-    background-color: $bgAndBorderColor;
-    border-color: $bgAndBorderColor;
-}
+
 
 @mixin defaultBox {
     border-radius: .5rem;
@@ -66,20 +134,7 @@ $fontSizes:(
     }
 }
 
-@each $name, $color in $colors {
-    .button--#{$name}{
-        @include buttonVariant($color)
-    }
-    .text--#{$name}{
-        color:$color
-    }
-    .border--#{$name}{
-        border-color:$color
-    }
-    .bg--#{$name}{
-        background-color:$color
-    }
-}
+
 
 *{
     margin: 0;
@@ -154,5 +209,17 @@ $fontSizes:(
 
 .d-flex{
     display: flex;
+}
+
+@media only screen and ( min-width:768px){
+    .card-wrapper{
+        display: flex;
+        gap: 1rem;
+        &__box{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+    }
 }
 

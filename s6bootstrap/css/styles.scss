@@ -1,0 +1,19 @@
+// Sobreescribir el mapa de colores de Bootstrap
+$theme-colors: (
+  "primary": #5562eb, // Azul personalizado
+  "success": #4cd3e3, // Turquesa personalizado
+  "info": #f2a654,    // Naranja personalizado
+  "warning": #ee5f5b, // Rojo personalizado
+  "danger": #55efc4,  // Verde menta personalizado
+  "light": #303952,   // Azul oscuro personalizado
+  "dark": #dcdde1,     // Gris claro personalizado
+  "front-color":peru,
+  "mi-color-fav":darkred
+);
+
+// Importar funciones y variables de Bootstrap necesarias antes de importar todo
+@import "bootstrap/functions";
+@import "bootstrap/variables"; // Importante: debe importarse después de definir $theme-colors
+
+// Importar el resto de Bootstrap
+@import "bootstrap/bootstrap";
