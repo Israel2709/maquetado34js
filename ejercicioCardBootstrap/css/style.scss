@@ -1,0 +1,24 @@
+// Importar funciones y variables de Bootstrap necesarias antes de importar todo
+@import "bootstrap/functions";
+@import "bootstrap/variables"; // Importante: debe importarse después de definir $theme-colors
+
+$theme-colors: map-merge($theme-colors, (
+    "pale-blue":hsl(225, 100%, 94%),
+    "bright-blue":hsl(245, 75%, 52%),
+    "very-pale-blue":hsl(225, 100%, 98%),
+    "desaturated-blue":hsl(224, 23%, 55%),
+    "dark-blue":hsl(223, 47%, 23%)
+) );
+
+// Importar el resto de Bootstrap
+@import "bootstrap/bootstrap";
+
+*{
+    font-family: "Red Hat Display", sans-serif;
+}
+
+body{
+    background-image: url('../images/pattern-background-desktop.svg');
+    background-position: top;
+    background-repeat: no-repeat;
+}
