@@ -1,0 +1,50 @@
+.btn-custom{
+    background-color: peru;
+    color: #333;
+    border: 1px solid peru;
+    &:hover{
+        background-color: rgb(238, 183, 129);
+    }
+}
+
+.my-custom-heading{
+    color: peru;
+    &:hover{
+        color:darkblue
+    }
+}
+
+.my-custom-link{
+    color: slategray;
+    text-decoration: none;
+    &:hover{
+        color:aquamarine;
+        text-decoration: underline;
+    }
+    &:visited{
+        color: red;
+    }
+}
+
+.nav-icon{
+    width: 50px;
+}
+
+.nav-form{
+    width: 50%;
+    .search-input{
+        background-image: url("https://static-00.iconduck.com/assets.00/search-icon-2048x2048-cmujl7en.png");
+        background-position: center left;
+        background-repeat: no-repeat;
+        background-size: 20px;
+        padding-left: 50px;
+        width: 100%;
+        background-position-x: 1rem;
+    }
+}
+
+.bell-icon, .avatar{
+    img{
+        width: 50px;
+    }
+}

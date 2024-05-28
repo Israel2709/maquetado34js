@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="css/styles.css" />
+  </head>
+  <body>
+    <div
+      class="offcanvas offcanvas-start"
+      tabindex="-1"
+      id="offcanvasExample"
+      aria-labelledby="offcanvasExampleLabel"
+    >
+      <div class="offcanvas-header">
+        <h5 class="offcanvas-title" id="offcanvasExampleLabel">Offcanvas</h5>
+        <button
+          type="button"
+          class="btn-close"
+          data-bs-dismiss="offcanvas"
+          aria-label="Close"
+        ></button>
+      </div>
+      <div class="offcanvas-body">
+        <div>
+          Some text as placeholder. In real life you can have the elements you
+          have chosen. Like, text, images, lists, etc.
+        </div>
+        <div class="dropdown mt-3">
+          <button
+            class="btn btn-secondary dropdown-toggle"
+            type="button"
+            data-bs-toggle="dropdown"
+          >
+            Dropdown button
+          </button>
+          <ul class="dropdown-menu">
+            <li><a class="dropdown-item" href="#">Action</a></li>
+            <li><a class="dropdown-item" href="#">Another action</a></li>
+            <li><a class="dropdown-item" href="#">Something else here</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <nav class="navbar navbar-expand-md bg-body-tertiary fixed-top">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="#"
+          ><img
+            src="https://dev-to-uploads.s3.amazonaws.com/uploads/logos/resized_logo_UQww2soKuUsjaOGNB38o.png"
+            alt=""
+            class="nav-icon"
+        /></a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="offcanvas"
+          data-bs-target="#offcanvasExample"
+          aria-controls="offcanvasExample"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <div class="d-flex w-100">
+            <form class="d-flex nav-form" role="search">
+              <input
+                class="form-control me-2 search-input"
+                type="search"
+                placeholder="Search"
+                aria-label="Search"
+              />
+            </form>
+            <div class="d-flex gap-3 align-items-center ms-auto">
+              <button class="btn btn-primary">write post</button>
+              <button class="btn bell-icon">
+                <img
+                  src="https://www.iconpacks.net/icons/1/free-bell-icon-860-thumb.png"
+                  alt=""
+                />
+              </button>
+              <button class="btn avatar">
+                <img
+                  src="https://media.dev.to/cdn-cgi/image/width=90,height=90,fit=cover,gravity=auto,format=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Fuser%2Fprofile_image%2F510536%2F8e1366bd-8483-42f4-af83-7f88286c5c00.jpeg"
+                  alt=""
+                />
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </nav>
+    <button
+      class="btn btn-primary"
+      type="button"
+      data-bs-toggle="offcanvas"
+      data-bs-target="#offcanvasExample"
+      aria-controls="offcanvasExample"
+    >
+      Button with data-bs-target
+    </button>
+    <button class="btn btn-custom">Primario</button>
+    <a href="#" class="my-custom-link">Ningún lugar</a>
+    <h1 class="my-custom-heading">Hola koders</h1>
+    <div class="container">
+      <div class="row">
+        <div class="col-12 col-md-2 d-none d-md-flex">
+          <ul class="list-group">
+            <li class="list-group-item">01</li>
+            <li class="list-group-item">02</li>
+            <li class="list-group-item">03</li>
+            <li class="list-group-item">04</li>
+            <li class="list-group-item">05</li>
+          </ul>
+        </div>
+        <div class="col-12 col-md-7">
+          <div class="card">
+            <img
+              src="https://media.dev.to/cdn-cgi/image/width=1000,height=420,fit=cover,gravity=auto,format=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2Fhhuzztf3ys79wm1drexc.jpg"
+              class="card-img-top"
+              alt="..."
+            />
+            <div class="card-body">
+              <div class="d-flex gap-3 align-items-center">
+                <img
+                  src="https://media.dev.to/cdn-cgi/image/width=90,height=90,fit=cover,gravity=auto,format=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Fuser%2Fprofile_image%2F1298800%2F2c75a5ac-800e-4eb7-96ea-1b433135680d.png"
+                  alt=""
+                  class="rounded-circle"
+                />
+                <div class="d-flex flex-column gap-3">
+                  <h6>Autor</h6>
+                  <span class="text-muted">May 23 (4 days ago)</span>
+                </div>
+              </div>
+              <h5 class="card-title">Post title</h5>
+              <div class="d-flex gap-3">
+                <button class="btn btn-secondary">$tag 01</button
+                ><button class="btn btn-secondary">$tag 02</button
+                ><button class="btn btn-secondary">$tag 03</button
+                ><button class="btn btn-secondary">$tag 04</button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-12 col-md-3 d-none d-md-flex flex-column">
+          <div class="card">
+            <div class="card-body">
+              <h3 class="card-title">Active discussions</h3>
+              <ul class="list-group">
+                <li class="list-group-item">item 01</li>
+                <li class="list-group-item">item 02</li>
+                <li class="list-group-item">item 03</li>
+                <li class="list-group-item">item 04</li>
+                <li class="list-group-item">item 05</li>
+              </ul>
+            </div>
+          </div>
+          <div class="card">
+            <div class="card-body">
+              <h3 class="card-title">Active discussions</h3>
+              <ul class="list-group">
+                <li class="list-group-item">item 01</li>
+                <li class="list-group-item">item 02</li>
+                <li class="list-group-item">item 03</li>
+                <li class="list-group-item">item 04</li>
+                <li class="list-group-item">item 05</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>
