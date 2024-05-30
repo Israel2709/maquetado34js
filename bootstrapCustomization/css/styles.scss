@@ -1,0 +1,26 @@
+@import "bootstrap/functions";
+@import "bootstrap/variables";
+// Importar el resto de Bootstrap
+@import "bootstrap/bootstrap";
+
+@mixin boxBase($borderColor:#acacac,$borderRadius:.5rem,$bgColor:white,$shadowColor:#ddd){
+    border: 1px solid $borderColor;
+    border-radius: $borderRadius;
+    background-color: $bgColor;
+    box-shadow: 3px 3px 3px $shadowColor;
+}
+
+.custom-card{
+    @include boxBase();
+    padding: 1rem;
+}
+
+.list-wrapper{
+    @include boxBase($borderColor:red,$shadowColor:purple);
+    display: flex;
+    flex-direction: column;
+}
+
+.main-nav{
+    @include boxBase(slategray,3rem,tomato,skyblue);
+}

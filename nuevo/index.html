@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tienda de Productos Láser</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+        background: #f4f4f9;
+        color: #333;
+      }
+      .container {
+        width: 80%;
+        margin: auto;
+        overflow: hidden;
+      }
+      header {
+        background: #005f73;
+        color: #fff;
+        padding-top: 30px;
+        min-height: 70px;
+        border-bottom: #02735e 3px solid;
+      }
+      header h1 {
+        text-align: center;
+        text-transform: uppercase;
+        margin: 0;
+      }
+      .products {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        padding: 20px;
+      }
+      .product {
+        background: white;
+        margin: 10px;
+        box-shadow: 0 0 15px 0 rgba(0, 0, 0, 0.2);
+        padding: 20px;
+        width: 30%;
+      }
+      .product img {
+        width: 100%;
+      }
+      .product button {
+        background: #008891;
+        color: white;
+        border: none;
+        padding: 10px;
+        width: 100%;
+        cursor: pointer;
+        text-transform: uppercase;
+      }
+      footer {
+        background: #005f73;
+        color: #fff;
+        text-align: center;
+        padding: 10px;
+        position: fixed;
+        left: 0;
+        bottom: 0;
+        width: 100%;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <h1>Tienda de Productos Láser</h1>
+    </header>
+
+    <div class="container">
+      <section class="products">
+        <div class="product">
+          <img src="ruta-a-tu-imagen.jpg" alt="Corte de MDF" />
+          <h3>Corte de MDF</h3>
+          <button
+            onclick="window.open('https://wa.me/123456789?text=Me%20interesa%20el%20producto%20Corte%20de%20MDF');"
+          >
+            Pedir por WhatsApp
+          </button>
+        </div>
+        <div class="product">
+          <img src="ruta-a-tu-imagen.jpg" alt="Grabado en Madera" />
+          <h3>Grabado en Madera</h3>
+          <button
+            onclick="window.open('https://wa.me/123456789?text=Me%20interesa%20el%20producto%20Grabado%20en%20Madera');"
+          >
+            Pedir por WhatsApp
+          </button>
+        </div>
+        <!-- Repite bloques similares para cada producto -->
+      </section>
+    </div>
+
+    <footer>
+      <p>Todos los derechos reservados - Tu Empresa 2024</p>
+    </footer>
+  </body>
+</html>
